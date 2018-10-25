@@ -1,4 +1,6 @@
 
+def if_enemy_has_more_fleets(state):
+    return len(state.enemy_fleets()) > len(state.my_fleets())
 
 def if_neutral_planet_available(state):
     return any(state.neutral_planets())

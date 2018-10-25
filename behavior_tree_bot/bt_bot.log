@@ -1,0 +1,1368 @@
+INFO:root:
+Selector: High Level Ordering of Strategies
+| Selector: try spreading close
+| | Action: desperado_attack
+| | Check: if_enemy_has_more_fleets
+| | Action: spread_to_closest_enemy_planet
+| | Action: spread_to_closest_neutral_planet
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Order:1 8 75.0
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: try spreading close -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:7 25.0 24.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:11 1.0 0.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:19 6.0 5.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:12 1.0 0.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:17 60.0 59.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:20 6.0 5.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:16 30.0 29.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Order:1 16 150.0
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Order:8 16 73.0
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: try spreading close -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: try spreading close -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Order:8 18 10.0
+DEBUG:root:Result: Action: desperado_attack -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:18 60.0 59.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:13 66.0 65.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:6 70.0 69.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:14 66.0 65.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:5 70.0 69.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:21 73.0 72.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:9 70.0 69.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:3 85.0 84.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:4 85.0 84.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:10 70.0 69.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:22 73.0 72.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Order:16 22 351.0
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Order:1 8 270.0
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Order:22 18 346.0
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: try spreading close -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Order:1 0 14.0
+DEBUG:root:Result: Action: desperado_attack -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Order:16 0 17.0
+DEBUG:root:Result: Action: desperado_attack -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Order:18 16 326.0
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:0 142.0 141.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Order:8 1 240.0
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: try spreading close -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: try spreading close -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Order:16 22 296.0
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Order:1 8 234.0
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Order:22 20 289.0
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Order:1 8 10.0
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Order:8 5 230.0
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: try spreading close -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Order:20 4 225.0
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: try spreading close -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: try spreading close -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: try spreading close -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Selector: try spreading close
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Check: if_enemy_has_more_fleets
+DEBUG:root:Result: Check: if_enemy_has_more_fleets -> Success
+DEBUG:root:Result: Selector: try spreading close -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Finish turn
+

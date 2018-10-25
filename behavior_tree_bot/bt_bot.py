@@ -7,6 +7,7 @@
 // own.
 """
 import logging, traceback, sys, os, inspect
+
 logging.basicConfig(filename=__file__[:-3] +'.log', filemode='w', level=logging.DEBUG)
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parentdir = os.path.dirname(currentdir)
@@ -25,17 +26,30 @@ def setup_behavior_tree():
     # Top-down construction of behavior tree
     root = Selector(name='High Level Ordering of Strategies')
 
-    offensive_plan = Sequence(name='Offensive Strategy')
-    largest_fleet_check = Check(have_largest_fleet)
-    attack = Action(attack_weakest_enemy_planet)
-    offensive_plan.child_nodes = [largest_fleet_check, attack]
+    #offensive_plan = Sequence(name='Offensive Strategy')
+    #largest_fleet_check = Check(have_largest_fleet)
+    #attack = Action(attack_weakest_enemy_planet)
+    #offensive_plan.child_nodes = [largest_fleet_check, attack]
+    #
+    #spread_sequence = Sequence(name='Spread Strategy')
+    #neutral_planet_check = Check(if_neutral_planet_available)
+    #spread_action = Action(spread_to_weakest_neutral_planet)
+    #spread_sequence.child_nodes = [neutral_planet_check, spread_action]
+    #
+    #root.child_nodes = [offensive_plan, spread_sequence, attack.copy()]
 
-    spread_sequence = Sequence(name='Spread Strategy')
-    neutral_planet_check = Check(if_neutral_planet_available)
-    spread_action = Action(spread_to_weakest_neutral_planet)
-    spread_sequence.child_nodes = [neutral_planet_check, spread_action]
+    plan = Selector(name="try spreading close")
+    desperado = Action(desperado_attack)
+    #reinforce = Action(reinforce_my_planets)
 
-    root.child_nodes = [offensive_plan, spread_sequence, attack.copy()]
+    attack_enemy = Action(spread_to_closest_enemy_planet)
+
+    attack_neutral = Action(spread_to_closest_neutral_planet)
+    check_spread = Check(if_enemy_has_more_fleets)
+    interrupt = Action(interrupt_enemy_spread)
+    check_spread.child_nodes = [interrupt]
+    plan.child_nodes = [desperado, check_spread, attack_enemy, attack_neutral]
+    root.child_nodes = [plan]
 
     logging.info('\n' + root.tree_to_string())
     return root

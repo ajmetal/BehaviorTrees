@@ -1,7 +1,6 @@
 import subprocess
 import os, sys
 
-
 def show_match(bot, opponent_bot, map_num):
     """
         Runs an instance of Planet Wars between the two given bots on the specified map. After completion, the
@@ -25,7 +24,7 @@ def test(bot, opponent_bot, map_num):
 
     print(command)
     p = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True)
-
+   
     while True:
         return_code = p.poll()  # returns None while subprocess is running
         line = p.stdout.readline().decode('utf-8')
@@ -54,11 +53,15 @@ def test(bot, opponent_bot, map_num):
 
 if __name__ == '__main__':
     path =  os.getcwd()
+
     opponents = ['opponent_bots/easy_bot.py',
                  'opponent_bots/spread_bot.py',
                  'opponent_bots/aggressive_bot.py',
                  'opponent_bots/defensive_bot.py',
                  'opponent_bots/production_bot.py']
+
+    opponents = ['opponent_bots/easy_bot.py',
+                 'opponent_bots/spread_bot.py']
 
     maps = [71, 13, 24, 56, 7]
 
