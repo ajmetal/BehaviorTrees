@@ -6,7 +6,8 @@
 // starting point, or you can throw it out entirely and replace it with your
 // own.
 """
-import logging, traceback, sys, os, inspect
+import logging, traceback, sys, os, inspect, time
+from math import inf
 
 logging.basicConfig(filename=__file__[:-3] +'.log', filemode='w', level=logging.DEBUG)
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
@@ -15,7 +16,7 @@ sys.path.append(parentdir)
 
 from behavior_tree_bot.behaviors import *
 from behavior_tree_bot.checks import *
-from behavior_tree_bot.bt_nodes import Selector, Sequence, Action, Check
+from behavior_tree_bot.bt_nodes import *
 
 from planet_wars import PlanetWars, finish_turn
 
@@ -24,39 +25,45 @@ from planet_wars import PlanetWars, finish_turn
 def setup_behavior_tree():
 
     # Top-down construction of behavior tree
-    root = Selector(name='High Level Ordering of Strategies')
+    root = Selector(name='Root')
 
-    #offensive_plan = Sequence(name='Offensive Strategy')
-    #largest_fleet_check = Check(have_largest_fleet)
-    #attack = Action(attack_weakest_enemy_planet)
-    #offensive_plan.child_nodes = [largest_fleet_check, attack]
-    #
-    #spread_sequence = Sequence(name='Spread Strategy')
-    #neutral_planet_check = Check(if_neutral_planet_available)
-    #spread_action = Action(spread_to_weakest_neutral_planet)
-    #spread_sequence.child_nodes = [neutral_planet_check, spread_action]
-    #
-    #root.child_nodes = [offensive_plan, spread_sequence, attack.copy()]
+    largest_fleet_check = Check(have_largest_fleet)
+    check_fleet = Check(have_largest_fleet)
+    check_production = Check(have_largest_production)
+    check_neutral_planet = Check(if_neutral_planet_available)
 
-    #attack strategy
-    selector_attack = Selector(name="attack")
+
+    #attack > spread strategy
+    sequence_offense = Sequence(name="take offensive stance")
+    selector_attack = Selector(name="attack > spread")
 
     action_desperado = Action(desperado_attack)
-    action_attack_enemy = Action(spread_to_closest_enemy_planet)
-    action_attack_neutral = Action(spread_to_closest_neutral_planet)
+    action_attack_enemy = Action(team_attack_enemy)
+    action_attack_enemy_solo = Action(spread_to_closest_enemy_planet)
+    action_attack_neutral_solo = Action(spread_to_closest_neutral_planet)
+    action_attack_enemy_from_any = Action(attack_enemy_from_any)
+    action_attack_neutral = Action(team_attack_neutral)
+    action_defend = Action(defend_my_planets)
 
-    selector_attack.child_nodes = [action_desperado, action_attack_enemy, action_attack_neutral]
+    repeater_attack = Repeater(child_nodes=[action_attack_enemy_from_any], name="Attack multiple times", count=3)
 
-    #strat to interrupt spread-happy opponents
-    sequence_interrupt = Sequence(name="interrupt strategy")
+    selector_attack.child_nodes = [action_desperado, action_attack_enemy_solo, action_attack_neutral_solo]
 
-    check_spread = Check(if_enemy_has_more_fleets)
-    action_interrupt = Action(interrupt_enemy_spread)
+    sequence_offense.child_nodes = [check_production, selector_attack]
 
-    sequence_interrupt.child_nodes = [check_spread, action_interrupt]
+    #total offensive strat
+    sequence_full_attack = Sequence(name="all out attack")
 
-#    root.child_nodes = [sequence_interrupt, selector_attack]
-    root.child_nodes = [selector_attack]
+    selector_full_attack = Selector(name="full attack")
+    selector_full_attack.child_nodes = [Repeater(child_nodes=[action_attack_enemy_from_any], name="Attack multiple times", count=20)]
+
+    sequence_full_attack.child_nodes = [check_fleet, selector_full_attack]
+
+    repeat_spread = Repeater(name="spread multiple", count=20)
+    repeat_spread.child_nodes = [check_neutral_planet, action_attack_neutral_solo]
+
+    #full tree
+    root.child_nodes = [Action(start_execution), Action(desperado_attack), Action(team_attack_enemy), Action(spread_to_closest_neutral_planet)]
 
     logging.info('\n' + root.tree_to_string())
     return root

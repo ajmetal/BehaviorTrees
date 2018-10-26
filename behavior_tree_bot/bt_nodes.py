@@ -66,6 +66,23 @@ class Sequence(Composite):
             return True
 
 
+############################### Decorator Nodes ##################################
+class Repeater(Composite):
+    def __init__(self, child_nodes=[], name=None, count=1):
+        self.child_nodes = child_nodes
+        self.name = name
+        self.count = count
+
+    @log_execution
+    def execute(self, state):
+        success = True
+        for i in range(self.count):
+            for child_node in self.child_nodes:
+                success = success and child_node.execute(state)
+                if not success: return False
+        return success
+
+
 ############################### Leaf Nodes ##################################
 class Check(Node):
     def __init__(self, check_function):
@@ -89,3 +106,6 @@ class Action(Node):
 
     def __str__(self):
         return self.__class__.__name__ + ': ' + self.action_function.__name__
+
+
+
