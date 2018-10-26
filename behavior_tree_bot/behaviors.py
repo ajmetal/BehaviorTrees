@@ -47,6 +47,17 @@ def get_first_beatable(state, from_planet, planets):
     return None
 
 #################################################################################################################
+def get_most_threatening(state, from_planet):
+    if stop_execution(): return None
+    avg_ally = {"x":0, "y":0}
+    allies = state.my_planets()
+    if not allies or len(allies) == 0:
+        return True
+    avg_ally["x"] = sum(i.x for i in allies) / len(allies)
+    avg_ally["y"] = sum(i.y for i in allies) / len(allies)
+    return list(sorted(state.enemy_planets(), key=lambda i: sqrt((avg_ally['x'] - i.x) ** 2 + (avg_ally['y'] - i.y) ** 2)))
+
+#################################################################################################################
 def get_closest_ally(state, from_planet):
     if stop_execution(): return None
     return min(list(filter(lambda i: i.ID != from_planet.ID, state.my_planets())), key=lambda x: state.distance(from_planet.ID, x.ID), default=None)
@@ -54,8 +65,51 @@ def get_closest_ally(state, from_planet):
 #################################################################################################################
 def is_being_targetted(state, my_planet):
     if stop_execution(): return None
-    enemy_targets = [f.destination_planet for f in state.enemy_fleets()]
-    return my_planet.ID in enemy_targets
+    #enemy_targets = [f.destination_planet for f in state.enemy_fleets()]
+    for f in state.enemy_fleets():
+        if f.destination_planet == my_planet.ID:
+            return f
+    return None
+    
+#################################################################################################################
+def defend(state):
+    my_IDs = [p.ID for p in state.my_planets()]
+    for f in state.enemy_fleets():
+        if f.destination_planet in my_IDs:
+            my_planet = state.planets[f.destination_planet]
+            min_size = f.num_ships + (my_planet.growth_rate * f.turns_remaining) + 1
+            defending_fleets = list(filter(lambda i: i.destination_planet == my_planet.ID, state.my_fleets()))
+            if min_size > f.num_ships > sum([f.num_ships for f in defending_fleets]):
+                return my_planet
+    return None
+
+#################################################################################################################
+def clamp(n, smallest, largest): return max(smallest, min(n, largest))
+
+#################################################################################################################
+def reinforce_strongest(state):
+    average_enemy = {"x":0, "y":0}
+    enemies = state.enemy_planets()
+    if not enemies or len(enemies) == 0:
+        return True
+    average_enemy["x"] = sum(i.x for i in enemies) / len(enemies)
+    average_enemy["y"] = sum(i.y for i in enemies) / len(enemies)
+    to_defend = None#defend(state)
+    by_distance = list(sorted(state.my_planets(), key=lambda i: sqrt((average_enemy['x'] - i.x) ** 2 + (average_enemy['y'] - i.y) ** 2)))
+    reinforce_target = None
+    if to_defend:
+        reinforce_target = to_defend
+    else:
+        if by_distance:
+            reinforce_target = by_distance[0]
+        else: 
+            return True
+    upper = len(by_distance)
+    for i in range(len(by_distance)):
+        if not is_being_targetted(state, by_distance[i]):
+            fleet_size = clamp(by_distance[i].num_ships * i / upper, by_distance[i].growth_rate * 3, by_distance[i].num_ships - 1)
+            issue_order(state, by_distance[i].ID, reinforce_target.ID, fleet_size)     
+
 
 #################################################################################################################
 def desperado_attack(state):
@@ -63,10 +117,11 @@ def desperado_attack(state):
     # p.num_ships + (fleet.turns_remaining * 5) + 1 - fleet.num_ships = how many ships I need to survive an attack
     for f in state.enemy_fleets():
         p = state.planets[f.destination_planet]
+
         #fleets are moved before planet ships are incremented!
         if f.turns_remaining == 1 and p.num_ships - f.num_ships < 1:
-            weakest_neutral = get_first_beatable(state, p, state.neutral_planets())
             weakest_enemy = get_first_beatable(state, p, state.enemy_planets())
+            weakest_neutral = get_first_beatable(state, p, state.neutral_planets())
             closest_ally = get_closest_ally(state, p)
             
             try:
@@ -92,18 +147,20 @@ def spread_to_closest_enemy_planet(state):
 #################################################################################################################
 def spread_to_planet(state, planets):
     if stop_execution(): return True
+    while True:
+        strongest_planet = max(state.my_planets(), key=lambda t: t.num_ships, default=None)
+        if not strongest_planet: return True
 
-    strongest_planet = max(state.my_planets(), key=lambda t: t.num_ships, default=None)
-    if not strongest_planet: return False
+        closest_target = get_first_beatable(state, strongest_planet, planets)
+        if not closest_target: return False
 
-    closest_target = get_first_beatable(state, strongest_planet, planets)
-    if not closest_target: return False
-
-    #enemies = list(sorted(state.enemy_planets(), key=lambda i: state.distance(i.ID, strongest_planet.ID)))
-
-    #for enemy in enemies:
-
-    return issue_order(state, strongest_planet.ID, closest_target.ID, min_fleet_size(state, strongest_planet, closest_target))
+        fleet_size = min_fleet_size(state, strongest_planet, closest_target)
+        if fleet_size > strongest_planet.num_ships:
+            return False
+        #enemy_fleet = is_being_targetted(state, strongest_planet)
+        #if enemy_fleet and strongest_planet.num_ships - fleet_size > enemy_fleet.num_ships:
+            #return True
+        issue_order(state, strongest_planet.ID, closest_target.ID, fleet_size)
 
 """
 #################################################################################################################
@@ -117,7 +174,7 @@ def attack_enemy_from_any(state):
         if not target: continue
         return issue_order(state, mp.ID, target.ID, min_fleet_size(state, mp, target))
     return False
-    """
+"""
 
 #################################################################################################################
 def team_attack(state, planets):

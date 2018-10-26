@@ -2,7 +2,10 @@ INFO:root:
 Selector: Root
 | Action: start_execution
 | Action: desperado_attack
-| Action: team_attack_enemy
+| Action: reinforce_strongest
+| Sequence: take offensive stance
+| | Check: have_largest_production
+| | Action: spread_to_closest_enemy_planet
 | Action: spread_to_closest_neutral_planet
 
 DEBUG:root:Executing:Selector: Root
@@ -10,14 +13,19 @@ DEBUG:root:Executing:Action: start_execution
 DEBUG:root:Result: Action: start_execution -> Failure
 DEBUG:root:Executing:Action: desperado_attack
 DEBUG:root:Result: Action: desperado_attack -> Failure
-DEBUG:root:Executing:Action: team_attack_enemy
-DEBUG:root:
-Planet(ID=1, x=14.021586, y=19.816506, owner=1.0, num_ships=100.0, growth_rate=5.0)
-DEBUG:root:Result: Action: team_attack_enemy -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:1 1 15.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
 DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
-DEBUG:root:Order:1 3 25.0
-DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Success
-DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Order:1 10 22.0
+DEBUG:root:Order:1 13 15.0
+DEBUG:root:Order:1 15 46.0
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
 DEBUG:root:Finish turn
 
 DEBUG:root:Executing:Selector: Root
@@ -25,25 +33,13 @@ DEBUG:root:Executing:Action: start_execution
 DEBUG:root:Result: Action: start_execution -> Failure
 DEBUG:root:Executing:Action: desperado_attack
 DEBUG:root:Result: Action: desperado_attack -> Failure
-DEBUG:root:Executing:Action: team_attack_enemy
-DEBUG:root:
-Planet(ID=1, x=14.021586, y=19.816506, owner=1.0, num_ships=80.0, growth_rate=5.0)
-DEBUG:root:Result: Action: team_attack_enemy -> Failure
-DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
-DEBUG:root:Order:1 7 79.0
-DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Success
-DEBUG:root:Result: Selector: Root -> Success
-DEBUG:root:Finish turn
-
-DEBUG:root:Executing:Selector: Root
-DEBUG:root:Executing:Action: start_execution
-DEBUG:root:Result: Action: start_execution -> Failure
-DEBUG:root:Executing:Action: desperado_attack
-DEBUG:root:Result: Action: desperado_attack -> Failure
-DEBUG:root:Executing:Action: team_attack_enemy
-DEBUG:root:
-Planet(ID=1, x=14.021586, y=19.816506, owner=1.0, num_ships=6.0, growth_rate=5.0)
-DEBUG:root:Result: Action: team_attack_enemy -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:1 1 15.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
 DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
 DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
 DEBUG:root:Result: Selector: Root -> Failure
@@ -54,10 +50,46 @@ DEBUG:root:Executing:Action: start_execution
 DEBUG:root:Result: Action: start_execution -> Failure
 DEBUG:root:Executing:Action: desperado_attack
 DEBUG:root:Result: Action: desperado_attack -> Failure
-DEBUG:root:Executing:Action: team_attack_enemy
-DEBUG:root:
-Planet(ID=1, x=14.021586, y=19.816506, owner=1.0, num_ships=11.0, growth_rate=5.0)
-DEBUG:root:Result: Action: team_attack_enemy -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Order:1 17 24.0
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:9 1.0 0.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
 DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
 DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
 DEBUG:root:Result: Selector: Root -> Failure
@@ -68,32 +100,16 @@ DEBUG:root:Executing:Action: start_execution
 DEBUG:root:Result: Action: start_execution -> Failure
 DEBUG:root:Executing:Action: desperado_attack
 DEBUG:root:Result: Action: desperado_attack -> Failure
-DEBUG:root:Executing:Action: team_attack_enemy
-DEBUG:root:
-Planet(ID=1, x=14.021586, y=19.816506, owner=1.0, num_ships=16.0, growth_rate=5.0)
-DEBUG:root:
-Ran out of time
-DEBUG:root:Result: Action: team_attack_enemy -> Success
-DEBUG:root:Result: Selector: Root -> Success
-DEBUG:root:Finish turn
-
-DEBUG:root:Executing:Selector: Root
-DEBUG:root:Executing:Action: start_execution
-DEBUG:root:Result: Action: start_execution -> Failure
-DEBUG:root:Executing:Action: desperado_attack
-DEBUG:root:Bad order:5 4.0 3.0
-DEBUG:root:Result: Action: desperado_attack -> Failure
-DEBUG:root:Executing:Action: team_attack_enemy
-DEBUG:root:
-Planet(ID=1, x=14.021586, y=19.816506, owner=1.0, num_ships=21.0, growth_rate=5.0)
-DEBUG:root:
-Ran out of time
-DEBUG:root:Result: Action: team_attack_enemy -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
 DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
-DEBUG:root:
-Ran out of time
-DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Success
-DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Order:10 14 20.0
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
 DEBUG:root:Finish turn
 
 DEBUG:root:Executing:Selector: Root
@@ -101,13 +117,18 @@ DEBUG:root:Executing:Action: start_execution
 DEBUG:root:Result: Action: start_execution -> Failure
 DEBUG:root:Executing:Action: desperado_attack
 DEBUG:root:Result: Action: desperado_attack -> Failure
-DEBUG:root:Executing:Action: team_attack_enemy
-DEBUG:root:
-Planet(ID=1, x=14.021586, y=19.816506, owner=1.0, num_ships=26.0, growth_rate=5.0)
-DEBUG:root:
-Ran out of time
-DEBUG:root:Result: Action: team_attack_enemy -> Success
-DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:13 10 4.666666666666667
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Success
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
 DEBUG:root:Finish turn
 
 DEBUG:root:Executing:Selector: Root
@@ -115,13 +136,19 @@ DEBUG:root:Executing:Action: start_execution
 DEBUG:root:Result: Action: start_execution -> Failure
 DEBUG:root:Executing:Action: desperado_attack
 DEBUG:root:Result: Action: desperado_attack -> Failure
-DEBUG:root:Executing:Action: team_attack_enemy
-DEBUG:root:
-Planet(ID=1, x=14.021586, y=19.816506, owner=1.0, num_ships=31.0, growth_rate=5.0)
-DEBUG:root:
-Ran out of time
-DEBUG:root:Result: Action: team_attack_enemy -> Success
-DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:15 15 9.0
+DEBUG:root:Order:13 15 3.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Success
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
 DEBUG:root:Finish turn
 
 DEBUG:root:Executing:Selector: Root
@@ -129,13 +156,20 @@ DEBUG:root:Executing:Action: start_execution
 DEBUG:root:Result: Action: start_execution -> Failure
 DEBUG:root:Executing:Action: desperado_attack
 DEBUG:root:Result: Action: desperado_attack -> Failure
-DEBUG:root:Executing:Action: team_attack_enemy
-DEBUG:root:
-Planet(ID=1, x=14.021586, y=19.816506, owner=1.0, num_ships=36.0, growth_rate=5.0)
-DEBUG:root:
-Ran out of time
-DEBUG:root:Result: Action: team_attack_enemy -> Success
-DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:15 15 9.0
+DEBUG:root:Bad order:13 2.0 3.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Success
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Order:1 11 31.0
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
 DEBUG:root:Finish turn
 
 DEBUG:root:Executing:Selector: Root
@@ -143,19 +177,1191 @@ DEBUG:root:Executing:Action: start_execution
 DEBUG:root:Result: Action: start_execution -> Failure
 DEBUG:root:Executing:Action: desperado_attack
 DEBUG:root:Result: Action: desperado_attack -> Failure
-DEBUG:root:Executing:Action: team_attack_enemy
-DEBUG:root:
-Planet(ID=1, x=14.021586, y=19.816506, owner=1.0, num_ships=41.0, growth_rate=5.0)
-DEBUG:root:
-Ran out of time
-DEBUG:root:Result: Action: team_attack_enemy -> Success
-DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:15 15 9.0
+DEBUG:root:Order:13 15 3.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Success
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
 DEBUG:root:Finish turn
 
-ERROR:root:Error in bot.
-Traceback (most recent call last):
-  File "behavior_tree_bot/bt_bot.py", line 86, in <module>
-    finish_turn()
-  File "C:\Users\AJmet\Documents\GameAI\BehaviorTrees\planet_wars.py", line 33, in finish_turn
-    stdout.flush()
-OSError: [Errno 22] Invalid argument
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:15 15 9.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Success
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:15 15 9.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Success
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:18 3.0 2.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:15 15 9.0
+DEBUG:root:Order:10 15 12.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Success
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Order:15 18 24.0
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:15 15 9.0
+DEBUG:root:Order:10 15 12.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Success
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Order:1 10 31.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:15 15 9.0
+DEBUG:root:Bad order:10 11.0 12.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Success
+DEBUG:root:Executing:Action: spread_to_closest_enemy_planet
+DEBUG:root:Result: Action: spread_to_closest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:12 8.0 7.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:15 15 9.0
+DEBUG:root:Order:10 15 12.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:15 15 9.0
+DEBUG:root:Order:14 15 3.2
+DEBUG:root:Bad order:10 11.0 12.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:15 15 9.0
+DEBUG:root:Order:14 15 3.0
+DEBUG:root:Order:10 15 12.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:16 24.0 23.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:15 15 9.0
+DEBUG:root:Bad order:10 7.0 12.0
+DEBUG:root:Order:17 15 23.2
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Order:15 16 43.0
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Order:13 17 9.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:15 15 9.0
+DEBUG:root:Order:10 15 14.0
+DEBUG:root:Order:17 15 6.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:15 15 9.0
+DEBUG:root:Order:10 15 12.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:15 15 9.0
+DEBUG:root:Order:10 15 12.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Order:14 18 15.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:15 15 9.0
+DEBUG:root:Order:10 15 12.0
+DEBUG:root:Bad order:18 5.0 6.0
+DEBUG:root:Order:11 15 16.666666666666668
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Order:18 15 6.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:15 15 9.0
+DEBUG:root:Order:11 15 6.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:19 76.0 75.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:15 15 9.0
+DEBUG:root:Order:16 15 9.0
+DEBUG:root:Bad order:11 2.0 6.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Order:15 19 85.0
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:15 15 9.0
+DEBUG:root:Order:16 15 9.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:15 15 9.0
+DEBUG:root:Bad order:18 4.0 6.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Order:18 15 5.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:15 15 9.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Order:17 13 28.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:19 19 6.0
+DEBUG:root:Order:15 19 9.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:19 16 20.0
+DEBUG:root:Order:15 16 18.5
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Order:10 18 35.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:19 16 15.5
+DEBUG:root:Order:15 16 15.5
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Order:16 11 29.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:19 15 32.666666666666664
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:19 19 6.0
+DEBUG:root:Order:13 19 10.666666666666666
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:16 19 9.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Order:13 16 8.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Order:15 20 85.0
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Order:15 16 24.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:19 19 6.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:20 19 6.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:16 19 25.333333333333332
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Order:19 16 13.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Order:20 16 8.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Bad order:18 1.0 6.0
+DEBUG:root:Bad order:11 2.0 6.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Bad order:16 6.0 9.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:19 19 6.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:21 80.0 79.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:16 19 9.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Bad order:19 5.0 6.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Order:11 16 21.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Order:18 14 24.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:19 19 6.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Bad order:14 2.0 3.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Order:19 14 13.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:22 80.0 79.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:5 87.0 86.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Order:14 14 3.0
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:4 88.0 87.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:6 87.0 86.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Bad order:7 90.0 89.0
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Action: desperado_attack
+DEBUG:root:Result: Action: desperado_attack -> Failure
+DEBUG:root:Executing:Action: reinforce_strongest
+DEBUG:root:Result: Action: reinforce_strongest -> Failure
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_largest_production
+DEBUG:root:Result: Check: have_largest_production -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Executing:Action: spread_to_closest_neutral_planet
+DEBUG:root:Result: Action: spread_to_closest_neutral_planet -> Failure
+DEBUG:root:Result: Selector: Root -> Failure
+DEBUG:root:Finish turn
+

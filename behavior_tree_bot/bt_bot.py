@@ -28,25 +28,21 @@ def setup_behavior_tree():
     root = Selector(name='Root')
 
     largest_fleet_check = Check(have_largest_fleet)
-    check_fleet = Check(have_largest_fleet)
     check_production = Check(have_largest_production)
     check_neutral_planet = Check(if_neutral_planet_available)
 
-
     #attack > spread strategy
-    sequence_offense = Sequence(name="take offensive stance")
+
     selector_attack = Selector(name="attack > spread")
 
     action_desperado = Action(desperado_attack)
-    action_attack_enemy = Action(team_attack_enemy)
-    action_attack_enemy_solo = Action(spread_to_closest_enemy_planet)
-    action_attack_neutral_solo = Action(spread_to_closest_neutral_planet)
-    action_attack_enemy_from_any = Action(attack_enemy_from_any)
-    action_attack_neutral = Action(team_attack_neutral)
+    action_attack_enemy = Action(spread_to_closest_enemy_planet)
+    action_attack_neutral = Action(spread_to_closest_neutral_planet)
     action_defend = Action(defend_my_planets)
+    action_reinforce = Action(reinforce_strongest)
 
-    repeater_attack = Repeater(child_nodes=[action_attack_enemy_from_any], name="Attack multiple times", count=3)
-
+    #repeater_attack = Repeater(child_nodes=[action_attack_enemy_from_any], name="Attack multiple times", count=3)
+    """
     selector_attack.child_nodes = [action_desperado, action_attack_enemy_solo, action_attack_neutral_solo]
 
     sequence_offense.child_nodes = [check_production, selector_attack]
@@ -55,15 +51,21 @@ def setup_behavior_tree():
     sequence_full_attack = Sequence(name="all out attack")
 
     selector_full_attack = Selector(name="full attack")
-    selector_full_attack.child_nodes = [Repeater(child_nodes=[action_attack_enemy_from_any], name="Attack multiple times", count=20)]
+    #selector_full_attack.child_nodes = [Repeater(child_nodes=[action_attack_enemy_from_any], name="Attack multiple times", count=20)]
 
     sequence_full_attack.child_nodes = [check_fleet, selector_full_attack]
 
     repeat_spread = Repeater(name="spread multiple", count=20)
     repeat_spread.child_nodes = [check_neutral_planet, action_attack_neutral_solo]
 
+    """
+
+    #sequence_offense = Sequence(name="take offensive stance")
+    #sequence_offense.child_nodes = (check_production, action_attack_enemy)
+
+    #sequence_defense
     #full tree
-    root.child_nodes = [Action(start_execution), Action(desperado_attack), Action(team_attack_enemy), Action(spread_to_closest_neutral_planet)]
+    root.child_nodes = [Action(start_execution), action_desperado, action_reinforce, action_attack_enemy, action_attack_neutral]
 
     logging.info('\n' + root.tree_to_string())
     return root

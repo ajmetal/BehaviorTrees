@@ -95,7 +95,6 @@ class Check(Node):
     def __str__(self):
         return self.__class__.__name__ + ': ' + self.check_function.__name__
 
-
 class Action(Node):
     def __init__(self, action_function):
         self.action_function = action_function
