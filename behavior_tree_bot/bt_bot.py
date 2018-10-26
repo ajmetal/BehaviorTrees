@@ -38,18 +38,25 @@ def setup_behavior_tree():
     #
     #root.child_nodes = [offensive_plan, spread_sequence, attack.copy()]
 
-    plan = Selector(name="try spreading close")
-    desperado = Action(desperado_attack)
-    #reinforce = Action(reinforce_my_planets)
+    #attack strategy
+    selector_attack = Selector(name="attack")
 
-    attack_enemy = Action(spread_to_closest_enemy_planet)
+    action_desperado = Action(desperado_attack)
+    action_attack_enemy = Action(spread_to_closest_enemy_planet)
+    action_attack_neutral = Action(spread_to_closest_neutral_planet)
 
-    attack_neutral = Action(spread_to_closest_neutral_planet)
+    selector_attack.child_nodes = [action_desperado, action_attack_enemy, action_attack_neutral]
+
+    #strat to interrupt spread-happy opponents
+    sequence_interrupt = Sequence(name="interrupt strategy")
+
     check_spread = Check(if_enemy_has_more_fleets)
-    interrupt = Action(interrupt_enemy_spread)
-    check_spread.child_nodes = [interrupt]
-    plan.child_nodes = [desperado, check_spread, attack_enemy, attack_neutral]
-    root.child_nodes = [plan]
+    action_interrupt = Action(interrupt_enemy_spread)
+
+    sequence_interrupt.child_nodes = [check_spread, action_interrupt]
+
+#    root.child_nodes = [sequence_interrupt, selector_attack]
+    root.child_nodes = [selector_attack]
 
     logging.info('\n' + root.tree_to_string())
     return root

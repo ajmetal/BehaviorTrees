@@ -55,7 +55,6 @@ class Selector(Composite):
         else:  # for loop completed without success; return failure
             return False
 
-
 class Sequence(Composite):
     @log_execution
     def execute(self, state):
