@@ -1,4 +1,4 @@
-DEBUG:root:Order:2 17 50.0
+DEBUG:root:Order:pID: 2 total ships: 100.0 fleet size: 50.0
 DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
@@ -9,6 +9,7 @@ DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
 
+DEBUG:root:Order:pID: 2 total ships: 75.0 fleet size: 37.5
 DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
@@ -31,6 +32,7 @@ DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
 
+DEBUG:root:Order:pID: 2 total ships: 93.0 fleet size: 46.5
 DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
@@ -45,7 +47,6 @@ DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
 
-DEBUG:root:Order:2 1 82.5
 DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
@@ -62,6 +63,7 @@ DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
 
+DEBUG:root:Order:pID: 9 total ships: 151.0 fleet size: 75.5
 DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
@@ -80,6 +82,7 @@ DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
 
+DEBUG:root:Order:pID: 2 total ships: 167.0 fleet size: 83.5
 DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
@@ -100,6 +103,7 @@ DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
 
+DEBUG:root:Order:pID: 9 total ships: 152.0 fleet size: 76.0
 DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
@@ -108,13 +112,13 @@ DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
 
-DEBUG:root:Order:2 13 119.0
 DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
 
+DEBUG:root:Order:pID: 2 total ships: 169.0 fleet size: 84.5
 DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
@@ -133,6 +137,7 @@ DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
 
+DEBUG:root:Order:pID: 9 total ships: 140.0 fleet size: 70.0
 DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
@@ -147,11 +152,11 @@ DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
 
-DEBUG:root:Order:2 17 107.0
 DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
 
+DEBUG:root:Order:pID: 2 total ships: 175.0 fleet size: 87.5
 DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
@@ -174,8 +179,87 @@ DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
 
-ERROR:root:Error in bot.
-Traceback (most recent call last):
-  File "opponent_bots/easy_bot.py", line 37, in <module>
-    current_line = input()
-EOFError: EOF when reading a line
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Order:pID: 9 total ships: 166.0 fleet size: 83.0
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Order:pID: 2 total ships: 233.0 fleet size: 116.5
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Order:pID: 22 total ships: 171.0 fleet size: 85.5
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Order:pID: 8 total ships: 35.0 fleet size: 17.5
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+

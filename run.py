@@ -58,22 +58,16 @@ if __name__ == '__main__':
     logging.basicConfig(filename=__file__[:-3] + '.log', filemode='w', level=logging.DEBUG)
     path =  os.getcwd()
 
-    opponents = [#'opponent_bots/easy_bot.py',
-                 'opponent_bots/spread_bot.py',]
-                 #'opponent_bots/aggressive_bot.py',
-                 #'opponent_bots/defensive_bot.py',
-                 #'opponent_bots/production_bot.py']
+    opponents = ['opponent_bots/easy_bot.py',
+                 'opponent_bots/spread_bot.py',
+                 'opponent_bots/aggressive_bot.py',
+                 'opponent_bots/defensive_bot.py',
+                 'opponent_bots/production_bot.py']
 
     #maps = [71, 13, 24, 56, 7]
     maps = [i+1 for i in range(100)]
     my_bot = 'behavior_tree_bot/bt_bot.py'
-    
-    for opponent in opponents:
-        won = 0
-        for map in maps:
-            won = won + test(my_bot, opponent, map)
-        logging.debug('\n' + str(won) + ' / 100')
-    """
+
     show = len(sys.argv) < 2 or sys.argv[1] == "show"
     for opponent, map in zip(opponents, maps):
         # use this command if you want to observe the bots
@@ -81,5 +75,8 @@ if __name__ == '__main__':
             show_match(my_bot, opponent, map)
         else:
             # use this command if you just want the results of the matches reported
-            test(my_bot, opponent, map)
-    """
+            for opponent in opponents:
+                won = 0
+                for map in maps:
+                    won = won + test(my_bot, opponent, map)
+                logging.debug('\n' + str(opponent) +" : " + str(won) + ' / 100')

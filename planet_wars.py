@@ -11,7 +11,7 @@ def issue_order(state, source_planet_ID, destination_planet_ID, fleet_num_ships)
     # Check for legal order
     planet = state.planets[source_planet_ID]
     if planet.num_ships < fleet_num_ships or planet.owner != 1:
-        logging.debug("Bad order:" + ' '.join([str(source_planet_ID), str(planet.num_ships), str(fleet_num_ships)]))
+        logging.debug("Bad order:" + ' '.join(['pID: ' + str(source_planet_ID), 'total ships: '+str(planet.num_ships), 'fleet size: '+str(fleet_num_ships)]))
         return False
 
     # Update state
@@ -20,7 +20,7 @@ def issue_order(state, source_planet_ID, destination_planet_ID, fleet_num_ships)
     state.planets[source_planet_ID] = planet._replace(num_ships =planet.num_ships - fleet_num_ships)
 
     # Send order
-    logging.debug("Order:" + ' '.join([str(source_planet_ID), str(destination_planet_ID), str(fleet_num_ships)]))
+    logging.debug("Order:" + ' '.join(['pID: ' + str(source_planet_ID), 'total ships: '+str(planet.num_ships), 'fleet size: '+str(fleet_num_ships)]))
     stdout.write("%d %d %d\n" % (source_planet_ID, destination_planet_ID, fleet_num_ships))
     stdout.flush()
     return True

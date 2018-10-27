@@ -29,7 +29,8 @@ def setup_behavior_tree():
 
     largest_fleet_check = Check(have_largest_fleet)
     check_production = Check(have_largest_production)
-    check_neutral_planet = Check(if_neutral_planet_available)
+    check_neutral_planet = Check(more_neutral_than_owned)
+    check_has_biggest_plnaet = Check(dont_have_biggest_planet)
 
     #attack > spread strategy
 
@@ -40,6 +41,7 @@ def setup_behavior_tree():
     action_attack_neutral = Action(spread_to_closest_neutral_planet)
     action_defend = Action(defend_my_planets)
     action_reinforce = Action(reinforce_strongest)
+    action_interrupt = Action(interrupt_enemy_spread)
 
     #repeater_attack = Repeater(child_nodes=[action_attack_enemy_from_any], name="Attack multiple times", count=3)
     """
@@ -60,12 +62,17 @@ def setup_behavior_tree():
 
     """
 
-    #sequence_offense = Sequence(name="take offensive stance")
-    #sequence_offense.child_nodes = (check_production, action_attack_enemy)
+    sequence_offense = Sequence(name="take offensive stance")
+    sequence_offense.child_nodes = [largest_fleet_check, action_attack_enemy]
+
+    #sequence_greed = Sequence(name="Try to take neutral planets")
+    #sequence_greed.child_nodes = [largest_fleet_check, action_attack_neutral]
+    
+    #repeater_spread = Repeater(child_nodes=[action_attack_neutral], name="spread multiple times", count=3)
 
     #sequence_defense
     #full tree
-    root.child_nodes = [Action(start_execution), action_desperado, action_reinforce, action_attack_enemy, action_attack_neutral]
+    root.child_nodes = [Action(start_execution), action_reinforce, action_interrupt, action_attack_enemy, action_attack_neutral,]
 
     logging.info('\n' + root.tree_to_string())
     return root

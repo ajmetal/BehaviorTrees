@@ -1,126 +1,29 @@
-DEBUG:root:Order:2 9 2.0
+DEBUG:root:Order:pID: 2 total ships: 100.0 fleet size: 2.0
 DEBUG:root:Finish turn
 
-DEBUG:root:Order:2 1 93.0
-DEBUG:root:Order:2 10 2.0
+DEBUG:root:Order:pID: 2 total ships: 103.0 fleet size: 78.0
+DEBUG:root:Order:pID: 2 total ships: 25.0 fleet size: 2.0
 DEBUG:root:Finish turn
 
-DEBUG:root:Order:2 17 4.0
+DEBUG:root:Order:pID: 2 total ships: 28.0 fleet size: 4.0
 DEBUG:root:Finish turn
 
-DEBUG:root:Order:2 18 4.0
+DEBUG:root:Order:pID: 2 total ships: 29.0 fleet size: 4.0
 DEBUG:root:Finish turn
 
-DEBUG:root:Order:2 11 9.0
+DEBUG:root:Order:pID: 2 total ships: 30.0 fleet size: 9.0
 DEBUG:root:Finish turn
 
-DEBUG:root:Order:2 12 9.0
+DEBUG:root:Order:pID: 2 total ships: 26.0 fleet size: 9.0
 DEBUG:root:Finish turn
 
+DEBUG:root:Order:pID: 2 total ships: 22.0 fleet size: 17.0
 DEBUG:root:Finish turn
 
-DEBUG:root:Order:2 14 9.0
+DEBUG:root:Order:pID: 2 total ships: 10.0 fleet size: 9.0
 DEBUG:root:Finish turn
 
-DEBUG:root:Finish turn
-
-DEBUG:root:Order:9 13 15.0
-DEBUG:root:Finish turn
-
-DEBUG:root:Finish turn
-
-DEBUG:root:Finish turn
-
-DEBUG:root:Order:2 16 25.0
-DEBUG:root:Finish turn
-
-DEBUG:root:Finish turn
-
-DEBUG:root:Finish turn
-
-DEBUG:root:Order:1 10 40.0
-DEBUG:root:Finish turn
-
-DEBUG:root:Order:9 14 26.0
-DEBUG:root:Finish turn
-
-DEBUG:root:Order:1 15 50.0
-DEBUG:root:Finish turn
-
-DEBUG:root:Finish turn
-
-DEBUG:root:Finish turn
-
-DEBUG:root:Order:2 17 37.0
-DEBUG:root:Finish turn
-
-DEBUG:root:Finish turn
-
-DEBUG:root:Order:12 18 10.0
-DEBUG:root:Finish turn
-
-DEBUG:root:Finish turn
-
-DEBUG:root:Order:10 1 27.0
-DEBUG:root:Finish turn
-
-DEBUG:root:Order:16 9 14.0
-DEBUG:root:Order:15 11 32.0
-DEBUG:root:Finish turn
-
-DEBUG:root:Order:15 13 14.0
-DEBUG:root:Finish turn
-
-DEBUG:root:Order:14 12 22.0
-DEBUG:root:Finish turn
-
-DEBUG:root:Order:2 18 32.0
-DEBUG:root:Finish turn
-
-DEBUG:root:Finish turn
-
-DEBUG:root:Finish turn
-
-DEBUG:root:Order:2 14 21.0
-DEBUG:root:Finish turn
-
-DEBUG:root:Order:9 15 24.0
-DEBUG:root:Finish turn
-
-DEBUG:root:Finish turn
-
-DEBUG:root:Finish turn
-
-DEBUG:root:Finish turn
-
-DEBUG:root:Finish turn
-
-DEBUG:root:Order:17 13 24.0
-DEBUG:root:Finish turn
-
-DEBUG:root:Order:14 12 12.0
-DEBUG:root:Finish turn
-
-DEBUG:root:Order:9 15 27.0
-DEBUG:root:Order:16 17 46.0
-DEBUG:root:Finish turn
-
-DEBUG:root:Order:10 19 77.0
-DEBUG:root:Finish turn
-
-DEBUG:root:Finish turn
-
-DEBUG:root:Order:1 20 77.0
-DEBUG:root:Finish turn
-
-DEBUG:root:Order:13 11 12.0
-DEBUG:root:Finish turn
-
-DEBUG:root:Finish turn
-
-DEBUG:root:Finish turn
-
-DEBUG:root:Order:2 21 81.0
+DEBUG:root:Order:pID: 9 total ships: 13.0 fleet size: 11.0
 DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
@@ -135,6 +38,20 @@ DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
 
+DEBUG:root:Order:pID: 1 total ships: 25.0 fleet size: 22.0
+DEBUG:root:Finish turn
+
+DEBUG:root:Order:pID: 2 total ships: 46.0 fleet size: 44.0
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Order:pID: 9 total ships: 40.0 fleet size: 33.0
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Order:pID: 9 total ships: 15.0 fleet size: 13.0
 DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
@@ -143,18 +60,96 @@ DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
 
-DEBUG:root:Order:19 20 14.0
+DEBUG:root:Finish turn
+
+DEBUG:root:Order:pID: 15 total ships: 26.0 fleet size: 22.0
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Order:pID: 1 total ships: 47.0 fleet size: 43.0
+DEBUG:root:Order:pID: 2 total ships: 57.0 fleet size: 55.0
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Order:pID: 9 total ships: 38.0 fleet size: 11.0
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Order:pID: 9 total ships: 35.0 fleet size: 34.0
+DEBUG:root:Finish turn
+
+DEBUG:root:Order:pID: 1 total ships: 29.0 fleet size: 22.0
+DEBUG:root:Finish turn
+
+DEBUG:root:Order:pID: 1 total ships: 12.0 fleet size: 8.0
+DEBUG:root:Order:pID: 2 total ships: 32.0 fleet size: 8.0
 DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
 
-DEBUG:root:Order:1 22 81.0
 DEBUG:root:Finish turn
 
 DEBUG:root:Finish turn
 
-DEBUG:root:Order:10 5 88.0
+DEBUG:root:Finish turn
+
+DEBUG:root:Order:pID: 12 total ships: 14.0 fleet size: 9.0
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Order:pID: 17 total ships: 9.0 fleet size: 6.0
+DEBUG:root:Order:pID: 10 total ships: 26.0 fleet size: 23.0
+DEBUG:root:Finish turn
+
+DEBUG:root:Order:pID: 12 total ships: 11.0 fleet size: 9.0
+DEBUG:root:Order:pID: 2 total ships: 79.0 fleet size: 77.0
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Order:pID: 1 total ships: 79.0 fleet size: 77.0
+DEBUG:root:Finish turn
+
+DEBUG:root:Order:pID: 12 total ships: 12.0 fleet size: 10.0
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Order:pID: 9 total ships: 85.0 fleet size: 81.0
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Order:pID: 18 total ships: 83.0 fleet size: 81.0
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
+DEBUG:root:Finish turn
+
 DEBUG:root:Finish turn
 
