@@ -1,10 +1,8 @@
 DEBUG:root:
-opponent_bots/easy_bot.py : 99 / 100
+opponent_bots/spread_bot.py : 92 / 100
 DEBUG:root:
-opponent_bots/spread_bot.py : 55 / 100
+opponent_bots/aggressive_bot.py : 86 / 100
 DEBUG:root:
-opponent_bots/aggressive_bot.py : 50 / 100
+opponent_bots/defensive_bot.py : 88 / 100
 DEBUG:root:
-opponent_bots/defensive_bot.py : 81 / 100
-DEBUG:root:
-opponent_bots/production_bot.py : 69 / 100
+opponent_bots/production_bot.py : 80 / 100

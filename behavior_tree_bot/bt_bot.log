@@ -1,32 +1,1232 @@
 INFO:root:
 Selector: Root
 | Action: start_execution
-| Action: reinforce_strongest
-| Action: interrupt_enemy_spread
-| Action: spread_to_closest_enemy_planet
-| Action: spread_to_closest_neutral_planet
+| Negator: ignore result
+| | Sequence: take offensive stance
+| | | Check: have_more_strength
+| | | Action: attack
+| | | Action: spread
+| Negator: ignore result
+| | Sequence: Try to take neutral planets
+| | | Action: spread
+| | | Action: attack
+| Action: reinforce
 
 DEBUG:root:Executing:Selector: Root
 DEBUG:root:Executing:Action: start_execution
 DEBUG:root:Result: Action: start_execution -> Failure
-DEBUG:root:Executing:Action: reinforce_strongest
-DEBUG:root:Order:pID: 1 total ships: 100.0 fleet size: 1
-ERROR:root:Error in bot.
-Traceback (most recent call last):
-  File "behavior_tree_bot/bt_bot.py", line 94, in <module>
-    do_turn(planet_wars)
-  File "behavior_tree_bot/bt_bot.py", line 82, in do_turn
-    behavior_tree.execute(planet_wars)
-  File "C:\Users\AJmet\Documents\GameAI\BehaviorTrees\behavior_tree_bot\bt_nodes.py", line 8, in logged_fn
-    result = fn(self, state)
-  File "C:\Users\AJmet\Documents\GameAI\BehaviorTrees\behavior_tree_bot\bt_nodes.py", line 52, in execute
-    success = child_node.execute(state)
-  File "C:\Users\AJmet\Documents\GameAI\BehaviorTrees\behavior_tree_bot\bt_nodes.py", line 8, in logged_fn
-    result = fn(self, state)
-  File "C:\Users\AJmet\Documents\GameAI\BehaviorTrees\behavior_tree_bot\bt_nodes.py", line 104, in execute
-    return self.action_function(state)
-  File "C:\Users\AJmet\Documents\GameAI\BehaviorTrees\behavior_tree_bot\behaviors.py", line 95, in reinforce_strongest
-    issue_order(state, by_distance[i].ID, reinforce_target.ID, fleet_size)
-  File "C:\Users\AJmet\Documents\GameAI\BehaviorTrees\planet_wars.py", line 25, in issue_order
-    stdout.flush()
-OSError: [Errno 22] Invalid argument
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Order:pID: 1 total ships: 100.0 fleet size: 2.0
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 1 total ships: 98.0 fleet size: 5.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Order:pID: 1 total ships: 103.0 fleet size: 2.0
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Order:pID: 1 total ships: 101.0 fleet size: 85.0
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 1 total ships: 16.0 fleet size: 5.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Order:pID: 1 total ships: 21.0 fleet size: 4.0
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 1 total ships: 17.0 fleet size: 5.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Order:pID: 1 total ships: 22.0 fleet size: 4.0
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 1 total ships: 18.0 fleet size: 5.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Order:pID: 1 total ships: 23.0 fleet size: 18.0
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 1 total ships: 5.0 fleet size: 5.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 1 total ships: 10.0 fleet size: 5.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Bad order:pID: 10 total ships: 1.0 fleet size: 4.0
+DEBUG:root:Order:pID: 1 total ships: 15.0 fleet size: 5.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 10 total ships: 5.0 fleet size: 4.0
+DEBUG:root:Order:pID: 1 total ships: 15.0 fleet size: 5.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 10 total ships: 9.0 fleet size: 4.0
+DEBUG:root:Order:pID: 1 total ships: 15.0 fleet size: 5.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 10 total ships: 13.0 fleet size: 4.0
+DEBUG:root:Order:pID: 1 total ships: 15.0 fleet size: 5.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Order:pID: 10 total ships: 17.0 fleet size: 17.0
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Bad order:pID: 10 total ships: 0.0 fleet size: 4.0
+DEBUG:root:Order:pID: 1 total ships: 15.0 fleet size: 5.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 10 total ships: 9.0 fleet size: 4.0
+DEBUG:root:Order:pID: 1 total ships: 15.0 fleet size: 5.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Order:pID: 10 total ships: 18.0 fleet size: 11.0
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 10 total ships: 7.0 fleet size: 4.0
+DEBUG:root:Order:pID: 1 total ships: 15.0 fleet size: 5.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 10 total ships: 12.0 fleet size: 4.0
+DEBUG:root:Order:pID: 1 total ships: 15.0 fleet size: 5.0
+DEBUG:root:Order:pID: 17 total ships: 3.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Failure
+DEBUG:root:Result: Sequence: take offensive stance -> Failure
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Order:pID: 10 total ships: 21.0 fleet size: 13.0
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 10 total ships: 8.0 fleet size: 4.0
+DEBUG:root:Order:pID: 1 total ships: 15.0 fleet size: 5.0
+DEBUG:root:Order:pID: 17 total ships: 3.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Order:pID: 2 total ships: 72.0 fleet size: 40.0
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 2 total ships: 32.0 fleet size: 5.0
+DEBUG:root:Order:pID: 10 total ships: 17.0 fleet size: 4.0
+DEBUG:root:Order:pID: 1 total ships: 15.0 fleet size: 5.0
+DEBUG:root:Order:pID: 17 total ships: 3.0 fleet size: 2.0
+DEBUG:root:Order:pID: 11 total ships: 10.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Order:pID: 1 total ships: 15.0 fleet size: 8.0
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 2 total ships: 32.0 fleet size: 5.0
+DEBUG:root:Order:pID: 10 total ships: 22.0 fleet size: 4.0
+DEBUG:root:Order:pID: 1 total ships: 7.0 fleet size: 5.0
+DEBUG:root:Order:pID: 17 total ships: 3.0 fleet size: 2.0
+DEBUG:root:Order:pID: 11 total ships: 12.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 2 total ships: 37.0 fleet size: 5.0
+DEBUG:root:Order:pID: 10 total ships: 22.0 fleet size: 4.0
+DEBUG:root:Order:pID: 1 total ships: 7.0 fleet size: 5.0
+DEBUG:root:Order:pID: 17 total ships: 3.0 fleet size: 2.0
+DEBUG:root:Order:pID: 11 total ships: 14.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 2 total ships: 42.0 fleet size: 5.0
+DEBUG:root:Order:pID: 10 total ships: 27.0 fleet size: 4.0
+DEBUG:root:Order:pID: 1 total ships: 7.0 fleet size: 5.0
+DEBUG:root:Order:pID: 17 total ships: 3.0 fleet size: 2.0
+DEBUG:root:Order:pID: 11 total ships: 14.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Order:pID: 2 total ships: 47.0 fleet size: 28.0
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Order:pID: 10 total ships: 32.0 fleet size: 28.0
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 10 total ships: 4.0 fleet size: 4.0
+DEBUG:root:Order:pID: 2 total ships: 19.0 fleet size: 5.0
+DEBUG:root:Order:pID: 1 total ships: 7.0 fleet size: 5.0
+DEBUG:root:Order:pID: 11 total ships: 5.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Order:pID: 9 total ships: 26.0 fleet size: 11.0
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 10 total ships: 8.0 fleet size: 4.0
+DEBUG:root:Order:pID: 9 total ships: 15.0 fleet size: 4.0
+DEBUG:root:Order:pID: 2 total ships: 19.0 fleet size: 5.0
+DEBUG:root:Order:pID: 1 total ships: 7.0 fleet size: 5.0
+DEBUG:root:Order:pID: 11 total ships: 5.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 10 total ships: 12.0 fleet size: 4.0
+DEBUG:root:Order:pID: 9 total ships: 15.0 fleet size: 4.0
+DEBUG:root:Order:pID: 2 total ships: 19.0 fleet size: 5.0
+DEBUG:root:Order:pID: 1 total ships: 7.0 fleet size: 5.0
+DEBUG:root:Order:pID: 13 total ships: 2.0 fleet size: 1.0
+DEBUG:root:Order:pID: 11 total ships: 5.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 15 total ships: 24.0 fleet size: 3.0
+DEBUG:root:Order:pID: 2 total ships: 19.0 fleet size: 5.0
+DEBUG:root:Order:pID: 9 total ships: 15.0 fleet size: 4.0
+DEBUG:root:Order:pID: 10 total ships: 16.0 fleet size: 4.0
+DEBUG:root:Order:pID: 1 total ships: 7.0 fleet size: 5.0
+DEBUG:root:Order:pID: 7 total ships: 1.0 fleet size: 1.0
+DEBUG:root:Order:pID: 13 total ships: 2.0 fleet size: 1.0
+DEBUG:root:Order:pID: 11 total ships: 5.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 15 total ships: 27.0 fleet size: 3.0
+DEBUG:root:Order:pID: 2 total ships: 19.0 fleet size: 5.0
+DEBUG:root:Order:pID: 9 total ships: 15.0 fleet size: 4.0
+DEBUG:root:Order:pID: 10 total ships: 16.0 fleet size: 4.0
+DEBUG:root:Bad order:pID: 16 total ships: 1.0 fleet size: 3.0
+DEBUG:root:Order:pID: 1 total ships: 7.0 fleet size: 5.0
+DEBUG:root:Order:pID: 7 total ships: 1.0 fleet size: 1.0
+DEBUG:root:Order:pID: 13 total ships: 2.0 fleet size: 1.0
+DEBUG:root:Order:pID: 11 total ships: 5.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Order:pID: 15 total ships: 30.0 fleet size: 29.0
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Bad order:pID: 15 total ships: 1.0 fleet size: 3.0
+DEBUG:root:Order:pID: 2 total ships: 19.0 fleet size: 5.0
+DEBUG:root:Order:pID: 9 total ships: 15.0 fleet size: 4.0
+DEBUG:root:Order:pID: 10 total ships: 21.0 fleet size: 4.0
+DEBUG:root:Order:pID: 16 total ships: 4.0 fleet size: 3.0
+DEBUG:root:Order:pID: 1 total ships: 7.0 fleet size: 5.0
+DEBUG:root:Order:pID: 7 total ships: 1.0 fleet size: 1.0
+DEBUG:root:Order:pID: 13 total ships: 2.0 fleet size: 1.0
+DEBUG:root:Order:pID: 11 total ships: 5.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 15 total ships: 8.0 fleet size: 3.0
+DEBUG:root:Order:pID: 14 total ships: 1.0 fleet size: 1.0
+DEBUG:root:Order:pID: 2 total ships: 19.0 fleet size: 5.0
+DEBUG:root:Order:pID: 10 total ships: 26.0 fleet size: 4.0
+DEBUG:root:Order:pID: 9 total ships: 15.0 fleet size: 4.0
+DEBUG:root:Order:pID: 16 total ships: 4.0 fleet size: 3.0
+DEBUG:root:Order:pID: 1 total ships: 7.0 fleet size: 5.0
+DEBUG:root:Order:pID: 7 total ships: 1.0 fleet size: 1.0
+DEBUG:root:Order:pID: 13 total ships: 2.0 fleet size: 1.0
+DEBUG:root:Order:pID: 11 total ships: 5.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 15 total ships: 15.0 fleet size: 3.0
+DEBUG:root:Order:pID: 2 total ships: 19.0 fleet size: 5.0
+DEBUG:root:Order:pID: 10 total ships: 33.0 fleet size: 4.0
+DEBUG:root:Order:pID: 9 total ships: 15.0 fleet size: 4.0
+DEBUG:root:Order:pID: 16 total ships: 4.0 fleet size: 3.0
+DEBUG:root:Order:pID: 1 total ships: 7.0 fleet size: 5.0
+DEBUG:root:Order:pID: 13 total ships: 2.0 fleet size: 1.0
+DEBUG:root:Order:pID: 11 total ships: 10.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 15 total ships: 19.0 fleet size: 3.0
+DEBUG:root:Order:pID: 2 total ships: 23.0 fleet size: 5.0
+DEBUG:root:Order:pID: 10 total ships: 35.0 fleet size: 4.0
+DEBUG:root:Order:pID: 9 total ships: 15.0 fleet size: 4.0
+DEBUG:root:Order:pID: 16 total ships: 4.0 fleet size: 3.0
+DEBUG:root:Order:pID: 1 total ships: 7.0 fleet size: 5.0
+DEBUG:root:Order:pID: 13 total ships: 2.0 fleet size: 1.0
+DEBUG:root:Order:pID: 11 total ships: 10.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Order:pID: 11 total ships: 10.0 fleet size: 8.0
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 15 total ships: 23.0 fleet size: 3.0
+DEBUG:root:Order:pID: 2 total ships: 27.0 fleet size: 5.0
+DEBUG:root:Order:pID: 10 total ships: 35.0 fleet size: 4.0
+DEBUG:root:Order:pID: 9 total ships: 15.0 fleet size: 4.0
+DEBUG:root:Order:pID: 16 total ships: 4.0 fleet size: 3.0
+DEBUG:root:Order:pID: 1 total ships: 7.0 fleet size: 5.0
+DEBUG:root:Order:pID: 11 total ships: 2.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 15 total ships: 32.0 fleet size: 3.0
+DEBUG:root:Order:pID: 16 total ships: 4.0 fleet size: 3.0
+DEBUG:root:Order:pID: 10 total ships: 39.0 fleet size: 4.0
+DEBUG:root:Order:pID: 9 total ships: 15.0 fleet size: 4.0
+DEBUG:root:Order:pID: 2 total ships: 31.0 fleet size: 5.0
+DEBUG:root:Order:pID: 1 total ships: 7.0 fleet size: 5.0
+DEBUG:root:Order:pID: 18 total ships: 19.0 fleet size: 2.0
+DEBUG:root:Order:pID: 11 total ships: 6.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 18 total ships: 19.0 fleet size: 2.0
+DEBUG:root:Order:pID: 2 total ships: 36.0 fleet size: 5.0
+DEBUG:root:Order:pID: 15 total ships: 52.0 fleet size: 3.0
+DEBUG:root:Order:pID: 9 total ships: 15.0 fleet size: 4.0
+DEBUG:root:Order:pID: 10 total ships: 49.0 fleet size: 4.0
+DEBUG:root:Order:pID: 16 total ships: 4.0 fleet size: 3.0
+DEBUG:root:Order:pID: 1 total ships: 7.0 fleet size: 5.0
+DEBUG:root:Bad order:pID: 17 total ships: 1.0 fleet size: 2.0
+DEBUG:root:Order:pID: 11 total ships: 6.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 15 total ships: 70.0 fleet size: 3.0
+DEBUG:root:Order:pID: 2 total ships: 41.0 fleet size: 5.0
+DEBUG:root:Order:pID: 10 total ships: 54.0 fleet size: 4.0
+DEBUG:root:Order:pID: 9 total ships: 15.0 fleet size: 4.0
+DEBUG:root:Order:pID: 16 total ships: 4.0 fleet size: 3.0
+DEBUG:root:Order:pID: 18 total ships: 21.0 fleet size: 2.0
+DEBUG:root:Order:pID: 1 total ships: 7.0 fleet size: 5.0
+DEBUG:root:Order:pID: 17 total ships: 3.0 fleet size: 2.0
+DEBUG:root:Order:pID: 11 total ships: 6.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Order:pID: 15 total ships: 92.0 fleet size: 77.0
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 15 total ships: 15.0 fleet size: 3.0
+DEBUG:root:Order:pID: 2 total ships: 48.0 fleet size: 5.0
+DEBUG:root:Order:pID: 10 total ships: 59.0 fleet size: 4.0
+DEBUG:root:Order:pID: 9 total ships: 15.0 fleet size: 4.0
+DEBUG:root:Order:pID: 16 total ships: 4.0 fleet size: 3.0
+DEBUG:root:Order:pID: 18 total ships: 21.0 fleet size: 2.0
+DEBUG:root:Order:pID: 1 total ships: 7.0 fleet size: 5.0
+DEBUG:root:Order:pID: 17 total ships: 3.0 fleet size: 2.0
+DEBUG:root:Order:pID: 11 total ships: 6.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 15 total ships: 26.0 fleet size: 3.0
+DEBUG:root:Order:pID: 2 total ships: 50.0 fleet size: 5.0
+DEBUG:root:Order:pID: 10 total ships: 61.0 fleet size: 4.0
+DEBUG:root:Order:pID: 9 total ships: 15.0 fleet size: 4.0
+DEBUG:root:Order:pID: 16 total ships: 4.0 fleet size: 3.0
+DEBUG:root:Order:pID: 18 total ships: 21.0 fleet size: 2.0
+DEBUG:root:Order:pID: 1 total ships: 7.0 fleet size: 5.0
+DEBUG:root:Order:pID: 7 total ships: 17.0 fleet size: 1.0
+DEBUG:root:Order:pID: 17 total ships: 3.0 fleet size: 2.0
+DEBUG:root:Order:pID: 11 total ships: 11.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Order:pID: 18 total ships: 21.0 fleet size: 2.0
+DEBUG:root:Order:pID: 2 total ships: 54.0 fleet size: 5.0
+DEBUG:root:Order:pID: 15 total ships: 35.0 fleet size: 3.0
+DEBUG:root:Order:pID: 9 total ships: 15.0 fleet size: 4.0
+DEBUG:root:Order:pID: 10 total ships: 63.0 fleet size: 4.0
+DEBUG:root:Order:pID: 16 total ships: 4.0 fleet size: 3.0
+DEBUG:root:Order:pID: 7 total ships: 17.0 fleet size: 1.0
+DEBUG:root:Order:pID: 1 total ships: 7.0 fleet size: 5.0
+DEBUG:root:Order:pID: 13 total ships: 2.0 fleet size: 1.0
+DEBUG:root:Order:pID: 17 total ships: 3.0 fleet size: 2.0
+DEBUG:root:Order:pID: 11 total ships: 11.0 fleet size: 2.0
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Order:pID: 10 total ships: 77.0 fleet size: 77.0
+DEBUG:root:Order:pID: 15 total ships: 90.0 fleet size: 81.0
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Selector: Root
+DEBUG:root:Executing:Action: start_execution
+DEBUG:root:Result: Action: start_execution -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: take offensive stance
+DEBUG:root:Executing:Check: have_more_strength
+DEBUG:root:Result: Check: have_more_strength -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Order:pID: 2 total ships: 83.0 fleet size: 81.0
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Result: Sequence: take offensive stance -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Negator: ignore result
+DEBUG:root:Executing:Sequence: Try to take neutral planets
+DEBUG:root:Executing:Action: spread
+DEBUG:root:Result: Action: spread -> Success
+DEBUG:root:Executing:Action: attack
+DEBUG:root:Result: Action: attack -> Success
+DEBUG:root:Result: Sequence: Try to take neutral planets -> Success
+DEBUG:root:Result: Negator: ignore result -> Failure
+DEBUG:root:Executing:Action: reinforce
+DEBUG:root:Result: Action: reinforce -> Success
+DEBUG:root:Result: Selector: Root -> Success
+DEBUG:root:Finish turn
+

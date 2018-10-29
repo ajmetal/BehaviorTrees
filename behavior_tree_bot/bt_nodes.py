@@ -82,6 +82,16 @@ class Repeater(Composite):
                 if not success: return False
         return success
 
+class Negator(Composite):
+    def __init__(self, child_nodes=[], name=None, count=1):
+        self.child_nodes = child_nodes
+        self.name = name
+        
+    @log_execution
+    def execute(self, state):
+        for child_node in self.child_nodes:
+            child_node.execute(state)
+        return False
 
 ############################### Leaf Nodes ##################################
 class Check(Node):

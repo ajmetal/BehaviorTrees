@@ -15,6 +15,9 @@ def have_largest_fleet(state):
           > sum(planet.num_ships for planet in state.enemy_planets()) \
             + sum(fleet.num_ships for fleet in state.enemy_fleets())
 
+def have_more_strength(state):
+  return have_largest_fleet(state) and have_largest_production(state)
+
 def no_fleets(state):
   return len(state.my_fleets()) == 0
 
