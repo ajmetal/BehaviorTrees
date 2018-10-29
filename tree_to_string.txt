@@ -1,0 +1,12 @@
+Selector: Root
+| Action: start_execution
+| Negator: ignore result
+| | Sequence: take offensive stance
+| | | Check: have_more_strength
+| | | Action: attack
+| | | Action: spread
+| Negator: ignore result
+| | Sequence: Try to take neutral planets
+| | | Action: spread
+| | | Action: attack
+| Action: reinforce
